@@ -1,8 +1,24 @@
-<div class="min-h-screen p-12 bg-netflixDark">
-  <h1 class="text-4xl text-center mb-12 text-white">Contact</h1>
-  <div class="max-w-xl mx-auto space-y-4">
-    <input type="email" [(ngModel)]="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-700 text-white" />
-    <textarea [(ngModel)]="message" placeholder="Your Message" rows="6" class="w-full p-3 rounded bg-gray-700 text-white"></textarea>
-    <button (click)="sendMessage()" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-500">Send Message</button>
+<div class="min-h-screen flex items-center justify-center px-4 py-12 bg-netflixDark">
+  <div class="contact-card">
+    <h1 class="name">Aziz Smeti</h1>
+    <h2 class="title">Full-Stack Software Engineer</h2>
+
+    <p class="lead">
+      With extensive experience in full-stack development, skilled in Angular, .NET, Node.js, Python, Tailwind CSS, Docker, Git, and cloud technologies.
+    </p>
+
+    <p class="specialties">Event &amp; Analytics Platforms | AI-Powered Systems | Hospital Management</p>
+
+    <div class="actions">
+      <button type="button" class="btn-view" (click)="viewProfile()">View Profile</button>
+    </div>
+
+    <p class="note">I'm always up for a chat or a coffee! Feel free to reach out.</p>
+
+    <div class="contact-info">
+      <a href="mailto:smetiaziz7@gmail.com" class="contact-link">chintusamala96@gmail.com</a>
+      <a href="tel:+21629674600" class="contact-link">+216 29674600</a>
+      <div class="coffee">Or catch up over a coffee ☕</div>
+    </div>
   </div>
 </div>

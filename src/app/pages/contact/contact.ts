@@ -1,18 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [ CommonModule, FormsModule],
+  imports: [ CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css'
 })
 export class Contact {
-  email: string = '';
-  message: string = '';
+  constructor(private router: Router) {}
 
-  sendMessage() {
-    alert(`Message sent!\nEmail: ${this.email}\nMessage: ${this.message}`);
+  viewProfile() {
+    this.router.navigateByUrl('/home').catch(() => {});
   }
 }

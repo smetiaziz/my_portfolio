@@ -1,0 +1,42 @@
+.contact-card {
+  max-width: 760px;
+  width: 100%;
+  background: rgba(17,24,39,0.7);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 32px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.name { font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+.title { font-size: 1.05rem; color: #d1d5db; margin-bottom: 14px; }
+
+.lead { color: #e5e7eb; line-height: 1.6; margin-bottom: 12px; }
+.specialties { color: #9ca3af; font-weight:600; margin-bottom: 18px; }
+
+.actions { margin-bottom: 16px; }
+.btn-view {
+  background: #ef4444; /* rouge Netflix-like */
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-view:hover { background: #dc2626; }
+
+.note { color: #d1d5db; margin-bottom: 12px; }
+
+.contact-info { display:flex; flex-direction:column; gap:8px; align-items:center; }
+.contact-link { color: #fff; text-decoration: none; background: rgba(255,255,255,0.03); padding:6px 12px; border-radius:6px; }
+.contact-link:hover { background: rgba(255,255,255,0.06); }
+
+.coffee { color:#f3f4f6; margin-top:6px; }
+/* responsive */
+@media (max-width:640px) {
+  .contact-card { padding: 20px; border-radius:10px; }
+  .name { font-size:1.5rem; }
+}
