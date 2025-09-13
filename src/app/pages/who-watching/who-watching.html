@@ -1,0 +1,9 @@
+<div class="min-h-screen flex flex-col justify-center items-center bg-netflixDark">
+<h1 class="text-5xl mb-12 text-white">Who's Watching?</h1>
+  <div class="roles flex gap-12">
+    <button *ngFor="let role of roles" (click)="selectRole(role.name)" class="role-btn flex flex-col items-center cursor-pointer transform transition hover:scale-110">
+      <img [src]="role.avatar" [alt]="role.name" class="role-avatar w-36 h-36 rounded-lg flex items-center justify-center text-4xl font-bold text-white shadow-lg" />
+      <span class="role-name mt-2 text-xl text-gray-400 hover:text-white">{{ role.name }}</span>
+    </button>
+  </div>
+</div>

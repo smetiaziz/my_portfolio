@@ -1,0 +1,11 @@
+<div class="min-h-screen p-12 bg-netflixDark">
+  <h1 class="text-4xl text-center mb-12">Experience</h1>
+  <div class="max-w-3xl mx-auto space-y-6">
+    <div *ngFor="let exp of experiences" class="bg-gray-800 p-6 rounded-lg border-l-4 border-red-600 transform transition hover:translate-x-2">
+      <h3 class="text-xl font-semibold mb-1">{{ exp.title }}</h3>
+      <p class="text-red-600 font-bold">{{ exp.company }}</p>
+      <p class="text-gray-400 mb-2">{{ exp.duration }}</p>
+      <p class="text-gray-300">{{ exp.description }}</p>
+    </div>
+  </div>
+</div>

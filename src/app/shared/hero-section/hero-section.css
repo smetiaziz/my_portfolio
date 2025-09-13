@@ -1,0 +1,33 @@
+.hero-root { position: relative; }
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/hero/hero.jpg'); /* mettre l'image ici */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: scale(1.02);
+  filter: saturate(0.95);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 48rem; /* ajuster si besoin */
+}
+
+/* lisibilité et responsive */
+.hero-intro { font-size: 1.05rem; color: #e6e6e6; }
+@media (max-width: 768px) {
+  .hero-content { left: 1.25rem; right: 1.25rem; bottom: 20%; }
+  .hero-intro { font-size: 0.95rem; }
+  .hero-content h1 { font-size: 2.25rem; }
+}
