@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-who-watching',
@@ -9,7 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class WhoWatching {
 @Output() roleSelected = new EventEmitter<string>();
-
+constructor(private router: Router) {}
   roles = [
   { name: 'Recruiter',  avatar: 'assets/avatars/recruiter.png' },
   { name: 'Developer',  avatar: 'assets/avatars/developer.png' },
@@ -17,7 +18,8 @@ export class WhoWatching {
 ];
 
 
-  selectRole(role: string) {
-    this.roleSelected.emit(role);
-  }
+selectRole(role: string) {
+  // Navigate to /home and pass the role as a query parameter
+  this.router.navigate(['/home'], { queryParams: { role } });
+}
 }

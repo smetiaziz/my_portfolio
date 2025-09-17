@@ -5,8 +5,7 @@
             (click)="go(pick)"
             type="button"
             class="relative cursor-pointer rounded-lg overflow-hidden aspect-video transform transition-transform hover:scale-105 text-left focus:outline-none">
-      <div [ngClass]="pick.bgClass || 'bg-gray-800'" class="w-full h-full flex items-center justify-center">
-        <img *ngIf="pick.avatar" [src]="pick.avatar" [alt]="pick.title" class="absolute inset-0 w-full h-full object-cover" />
+      <div [ngClass]="pick.bgClass || 'bg-gray-800'" class="w-full h-full flex items-center justify-center bg-cover bg-center" [style.background-image]="pick.image ? 'url(' + pick.image + ')' : null">
         <h4 class="text-2xl text-white z-10">{{ pick.title }}</h4>
       </div>
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 transform translate-y-full transition-transform hover:translate-y-0">
